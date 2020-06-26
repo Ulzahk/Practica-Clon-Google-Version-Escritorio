@@ -140,20 +140,28 @@ main .main-buttons button:hover{
     border: 1px solid #c6c6c6;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     color: #222222;
+    outline: none;
 }
 
-footer{
+main .main-buttons button:focus{
+    outline: none;
+}
+
+
+ footer{
     width: 100%;
     height: 50px;
     position: absolute;
     bottom: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     font-size: 15px;
     background-color: #f2f2f2;
     border-top: 1px solid #e4e4e4;
 }
+
 
 footer ul{
     margin: 10px;
@@ -179,3 +187,67 @@ footer ul li a:hover{
     text-decoration: underline;
 }
 
+@media (max-width: 850px){
+   
+    footer{
+        height: 100px;
+        justify-content: center;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 550px){
+    main .main-logo{
+        width: 100%;
+    }
+
+    main .main-logo img{
+        width: 200px;
+    }
+
+    main .main-input{
+        width: 300px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    main .main-input-container{
+        width: 295px;
+        border-radius: 100px;
+
+    }
+
+    main .main-input input{
+        width: 280px;
+        height: 45px;
+    }
+    
+    main .main-input .search-icon{
+        padding-left: 25px;
+    }
+
+    main .main-input .micro-icon{
+        padding-right: 25px;
+    }
+    
+
+    main .main-buttons{
+        width: 270px;
+        margin: 0 auto;
+    }
+
+    main .main-buttons div{
+        display: block;
+    }
+
+    main .main-buttons button{
+        height: 36px;
+        background-color: #f2f2f2;
+        border: 1px solid #f2f2f2;
+        font-size: 14px;
+        color: #5f6368;
+        border-radius: 5px;
+        padding: 0 15px;
+        margin-bottom: 15px;
+    }
+}
